@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 1%;
+        }
+
+        img{
+            width: 90%;
+            height: auto;
+            border: 3px solid black;
+        }
+
+        .img{
+            width: 90%;
+            padding-bottom: 5%;
+        }
+
+        *:not(h1):not(h2){
+            font-size: larger;
+            padding: 1%;
+            word-wrap: break-word;
+            margin: auto;
+        }
+
+        @media screen and (max-width:600px) {
+            .grid {
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat</h1>
+    <div>Cats may rule the web, but certain famous felines are the true kings of the internet and have earned a place in meme history. From Keyboard Cat to Grumpy Cat, we rounded up some of our favorite feline memes and took a look at their rise to internet fame.</div>
+    <h2>List of Cat</h2>
+    <div class="grid">
+        <div class="img"><img src="cat1.jpg" alt="" srcset=""></div>
+        <div class="img"><img src="cat2.jpg" alt="" srcset=""></div>
+        <div class="img"><img src="cat3.jpeg" alt="" srcset=""></div>
+        <div class="img"><img src="cat4.jpg" alt="" srcset=""></div>
+    </div>
+</body>
+</html>

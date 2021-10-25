@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="change.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <style>
+        .boxx{
+            overflow: auto;
+            height: 230px;
+        }   
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row"><br></div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="colornum" class="col">code color :</label>
+                    <div class="col-7"><input placeholder="#ffffff" type="text" class="form-control" id="colornum"></div>
+            </div>
+                <button onclick="change()" style="width: 100%;" class="btn btn-dark">change color</button>
+            </div>
+
+            <div class="col">
+                <div id="box1" class="card text-black box" style="max-width: 18rem; background-color: rgb(0, 133, 126);">
+                    <div class="card-header"><h6>Date: 08/30/20</h6></div>
+                    <div class="card-body boxx">
+                      <h5 class="card-title">Card</h5>
+                      <p class="card-text" style="font-size: larger">If you have been following banking, investing, or cryptocurrency over the last ten years, you may be familiar with “blockchain,”</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="box2" class="card text-black box" style="max-width: 18rem; background-color: rgb(0, 133, 126);">
+                    <div class="card-header"><h6>Date: 08/30/20</h6></div>
+                    <div class="card-body boxx">
+                      <h4 class="card-title">Title</h4>
+                      <p class="card-text" style="font-size: medium;">the record-keeping technology behind the Bitcoin network. And there’s a good chance that it only makes so much sense. In trying to learn more about blockchain</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="box3" class="card text-black" style="max-width: 18rem; background-color: rgb(0, 133, 126);">
+                    <div class="card-header"><h6>Date: 08/30/20</h6></div>
+                    <div class="card-body boxx">
+                      <h3 class="card-title">Topic</h3>
+                      <p class="card-text" style="font-size: small;">กาลครั้งหนึ่งนานมาแล้ว ณ บริเวณทุ่งหญ้าอันกว้างใหญ่ มีครอบครัวมดฝูงเล็กอาศัยอยู่รวมกันใต้โพรงดินขนาดกำลังพอเหมาะ ซึ่งข้าง ๆ โพรงดินนั้นคือขอนไม้เก่าที่ตั๊กแตนเจ้าสำราญใช้พักอาศัยเช่นกัน
+
+                        นิทานอีสป
+                        
+                                  ในช่วงฤดูร้อนที่ผลผลิตพืชพรรณงอกงามออกรวงมากมาย สมาชิกบ้านมดทั้งหลายต่างขยันขันแข็งเก็บเกี่ยวพืชเหล่านั้นมาตุนไว้สำหรับหน้าหนาว ส่วนเจ้าตั๊กแตนกลับเอาแต่เล่นดนตรีอย่างเพลิดเพลิน และแปลกใจว่าทำไมฝูงมดต้องขยันถึงเพียงนี้ เมื่อเห็นเช่นนั้นตั๊กแตนจึงแวะไปสอบถาม
+                        
+                                  "ฝูงมดตัวน้อยเอ๋ย พวกเธอจะเร่งทำงานเก็บพืชพรรณไปทำไมกันมากมาย" ตั๊กแตนเอ่ย
+                        
+                                  "ก็เก็บไว้กินตลอดฤดูหนาวน่ะสิ" เสียงของมดซึ่งเป็นหัวหน้าตอบกลับพลางเก็บเกี่ยวพืชพรรณไปด้วย
+                        
+                                  "โห ! ฤดูหนาวเลยหรือ อีกนานเลยนะ เพราะนี่ก็เพิ่งจะเข้าหน้าร้อนเอง" เจ้าตั๊กแตนพูดด้วยน้ำเสียงแปลกใจ
+                        
+                                  "ก็เราเก็บเกี่ยวตอนนี้ ฤดูหนาวจะได้มีอาหารกินอย่างอุดมสมบูรณ์แถมได้พักผ่อนแบบเต็มที่ไงล่ะ" หัวหน้ามดอธิบาย
+                        
+                                  "แต่เที่ยวเล่นพักผ่อนในฤดูร้อนก็สนุกไปอีกแบบนะ ทำไมจะต้องรอถึงหน้าหนาวด้วย" เสียงตั๊กแตนโต้กลับ "เอาเถอะ ฉันขอกลับบ้านไปเล่นดนตรี เต้นรำ ก่อนแล้วกันนะ"
+                         
+                                  ตั๊กแตนเดินกลับไปอย่างสบายใจไม่เดือดร้อน ส่วนฝูงมดก็ทำหน้าที่ของตนอย่างแข็งขัน
+                        
+                        นิทานอีสป
+                        
+                                  เวลาผ่านไปไม่นานนัก ลมหนาวเย็นยะเยือกก็มาเยือน เป็นสัญญาณเตือนว่าเข้าสู่ฤดูหนาวแล้วนั่นเอง ในขณะเดียวกันผลไม้พืชพรรณที่เคยงอกเงยต่างโรยรา จะหาอาหารมากินแทบไม่มี แต่ถึงอย่างไรฝูงมดก็ไม่เดือดร้อน เพราะพวกมันเก็บตุนของกินไว้แล้วมากมาย
+                        
+                                  "ดีนะเนี่ยที่เราเก็บอาหารเอาไว้เยอะแยะ คราวนี้จะได้กินแบบไม่ต้องกลัวอด" มดตัวเล็กเอ่ยขึ้นมา
+                        
+                                  "ใช่ ๆ ต้องขอบคุณพวกเราจริง ๆ ที่ขยันขันแข็งอดทนทำงานทำให้เรามีกินในวันนี้" หัวหน้ามดประกาศขอบคุณท่ามกลางความยินดีของมดทุกตัว
+                        
+                                  ก๊อก ก๊อก ก๊อก ! !... เสียงเคาะประตูหน้าโพรงมดดังขึ้น "สงสัยมีแขกมาเยี่ยมหรือเอาอาหารมาแลกเป็นแน่" มดตัวเล็กพูดแล้วเดินไปเปิดประตู
+                        
+                        นิทานอีสป
+                        
+                                  หน้าประตูนั้นคือตั๊กแตนเจ้าสำราญผู้พักอาศัยอยู่ข้าง ๆ ที่เคยมีท่าทางสดใสร่าเริง แต่คราวนี้ ตั๊กแตนกลับยืนก้มหน้าด้วยความหิวโซ พอประตูเปิดจึงรีบเดินตรงมาหาหัวหน้ามดที่เคยสนทนาด้วยทันที
+                        
+                                  "สวัสดีมดเอ๋ย ฉันหิวเหลือเกินไม่ได้กินอะไรมาหลายวัน พอจะมีอาหารแบ่งฉันบ้างไหม" ตั๊กแตนขอร้อง
+                        
+                                  "อะไรกัน บ้านเธอไม่มีอะไรกินเลยหรือ ช่วงฤดูร้อนผลผลิตออกจะอุดมสมบูรณ์" หัวหน้ามดถามด้วยความสงสัย
+                        
+                                  "ฉันมัวแต่ยุ่งกับการเล่นดนตรีและเต้นรำ เลยไม่มีเวลามานั่งทำงานกักตุนอาหารไว้กินอย่างเธอ" คำแก้ตัวของตั๊กแตน
+                        
+                        นิทานอีสป
+                        
+                                  "อะไรกัน ! นี่เธอไม่ทำงานเลยเหรอ มัวแต่เล่นดนตรีสนุกสนานเนี่ยนะ" หัวหน้ามดตวาด ด้านตั๊กแตนก็ทำหน้าเจื่อนโดยไม่มีคำตอบโต้ "ถ้าเธอไม่รู้จักแบ่งเวลาเล่นกับเวลาทำงาน ฉันก็คงปันอาหารให้เธอไม่ได้ เจ้ากลับไปเถอะ"
+                        
+                                  พอสิ้นคำพูดของหัวหน้ามด เจ้าตั๊กแตนเลยเดินกลับบ้านไปแบบหิวโหย ส่วนฝูงมดก็พักผ่อนแบบสำราญกับอาหารที่ตุนมาจากช่วงหน้าร้อน
+                        
+                        นิทานอีสป
+                        
+                        นิทานเรื่องนี้สอนให้รู้ว่า :
+                        
+                                  คนเราควรจะรู้จักหน้าที่ของตัวเอง เวลาไหนควรทำงาน เวลาไหนควรเล่น  หากมัวแต่เล่นไม่ยอมทำงานเลย สักวันหนึ่งชีวิตอาจเจอเรื่องเดือดเนื้อร้อนใจจนหันไปพึ่งใครไม่ได้ เพราะเราไม่ยอมทำงานเพื่อหาเลี้ยงและยืนบนลำแข้งของตนนั่นเอง</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

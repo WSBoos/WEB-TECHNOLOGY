@@ -1,0 +1,25 @@
+body {
+    display: block;
+    margin-top:4%;
+    background: sandybrown;
+    color: whitesmoke;
+    font-size: x-large;
+    text-align: center;
+  }
+
+  input, select{
+    font-size: medium;
+  }
+
+  *{
+    font-family: "Pattaya", sans-serif;
+  }
+
+  div{
+    background: rgba(227, 244, 255, 0.158);
+    margin: auto;
+    width: 550px;
+    height: 600px;
+    padding: 1px;
+    border-radius: 8px;
+  }

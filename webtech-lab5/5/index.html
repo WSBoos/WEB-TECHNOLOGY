@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<style>
+    #list{
+        width: 300px;
+        padding: 5%;
+    }
+
+    h1{
+        text-align: center;
+        margin: auto;
+        padding: 5%;
+    }
+
+    h3{
+        background-color: rgb(97, 97, 255);
+        color: white;
+        width: 100%;
+        padding: 1%;
+        border-radius: 10px;
+        border: white solid 1px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row"><h1>Tutor list</h1></div>
+        <div class="row">
+            <div class="col-4">
+                <ul class="list-group" id="list"></ul>
+            </div>
+            <div class="col-8" id="detail">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let requestURL = 'tutor.json'; 
+        let request = new XMLHttpRequest(); 
+        request.onreadystatechange = function () { 
+            if (request.readyState == 4 && request.status == 200) {             
+                dataReportStatus(JSON.parse(request.responseText));            
+            } }; 
+        request.open("GET", requestURL, true); 
+        request.send(); 
+        
+        function dataReportStatus(data) {
+            for (let i = 0; i < data.length; i++) {
+                let list = document.getElementById("list");
+                let li = document.createElement("li");
+                li.className = "list-group-item";
+                let tnode = document.createTextNode(data[i].firstname + ' ' + data[i].lastname);
+                li.appendChild(tnode);
+                list.appendChild(li);
+
+                let detail = document.getElementById("detail");
+                let sth = document.createElement("h3");
+                let tnodeheadDetail = document.createTextNode(data[i].firstname + ' ' + data[i].lastname);
+                sth.appendChild(tnodeheadDetail);
+                detail.appendChild(sth);
+
+                let div = document.createElement("div");
+                let ul2 = document.createElement("ul");
+                let tnodeAge = document.createTextNode("Age : " + data[i].age);
+                let tnodeTel = document.createTextNode("Tel : " + data[i].tel);
+                let tnodeSub = document.createTextNode("Subject : ");
+                div.appendChild(tnodeAge);
+                let p1 = document.createElement("p");
+                let p2 = document.createElement("p");
+                let p3 = document.createElement("p");
+                detail.appendChild(div);
+                detail.appendChild(p1);
+                detail.appendChild(tnodeTel);
+                detail.appendChild(p2);
+                detail.appendChild(tnodeSub);
+                detail.appendChild(p3);
+                detail.appendChild(ul2);
+                for (let j = 0; j < data[i].subject.length; j++) {
+                    let li2 = document.createElement("li");
+                    let Sub = document.createTextNode(data[i].subject[j]);
+                    li2.appendChild(Sub);
+                    ul2.appendChild(li2);
+                }
+            }
+        }
+    </script> 
+</body>
+</html>

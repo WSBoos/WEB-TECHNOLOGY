@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let num = 0;
+    let body = document.getElementsByTagName("body")[0];
+    let table = document.createElement("table");
+    table.style.margin = "auto";
+    table.style.marginTop = "5%";
+    table.style.fontSize = "larger";
+    table.style.color = "white";
+    table.style.textAlign = "center";
+    let row = table.insertRow(0);
+    for (let i = 1; i <= 8; i++){
+        for (let j = 0; j <= 7; j++) {
+            num += 1;
+            let cell = row.insertCell(j);
+            let a = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            let c = Math.floor(Math.random() * 256);
+            cell.style.background = "rgb(" + a + ", " + b + ", " + c + ")";
+            cell.style.padding = "20";
+            cell.style.border = "1px solid black";
+            let tnode = document.createTextNode(num);
+            cell.appendChild(tnode);
+        }
+        row = table.insertRow(i);
+    }
+    body.appendChild(table);
+</script>
+</html>

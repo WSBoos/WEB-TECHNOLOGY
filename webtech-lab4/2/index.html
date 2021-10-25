@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <label for="num1">Value 1:</label>
+    <input id="num1" type="text">
+    <p></p>
+    <label for="num2">Value 2:</label>
+    <input id="num2" type="text">
+    <p></p>
+    <button onclick="sum()">Calculate</button> 
+    <p id="ans">Result : </p>
+    <div id="lit"></div>
+
+    <script>
+        function sum(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            document.getElementById("ans").innerHTML = "Result : " + (parseInt(num1) + parseInt(num2));
+
+            var sth = document.createElement("p");
+            sth.innerHTML = num1 + " + " + num2 + " = " + (parseInt(num1) + parseInt(num2));
+            let ans = document.getElementById("lit").appendChild(sth);
+        }
+    </script>
+</body>   
+</html>

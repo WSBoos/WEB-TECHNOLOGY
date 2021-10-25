@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar-expand-lg navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="react-logo.png" width="140" height="45" class="d-inline-block align-top" alt="" loading="lazy">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#react">React คือ??</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#detail">รายละเอียด</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#use">การใช้งาน</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#example">ตัวอย่าง</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="home">
+        <div class="row">
+            <img src="wall.jpeg" class="img-fluid" />
+        </div>
+    </div>
+
+    <div class="container" id="react">
+        <div class="row">
+            <div class="col-4 centerhead zoom">React คืออะไร??</div>
+            <div class="col-6 centerbody">
+                React หรือ React.js คือ javascript library ที่ถูกพัฒนาโดย facebook ซึ่งออกแบบมาเพื่อสร้าง UI ให้กับ web application ซึ่งจะทำงานส่วนใหญ่เกี่ยวกับ view layer หัวใจหลักของ React นั้นคือ component การที่สร้าง component ขึ้นมาสามารถทำให้ reuse การใช้งานได้ และเมื่อประกอบกันหลาย component กลายเป็น UI ของ Web Application นั้นเอง
+            </div>
+        </div>
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="old.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="new.jpg" alt="Second slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        <div class="row centerbody" style="padding-bottom: 10%;">
+            React ใช้หลักการ Virtual DOM ในการทำงาน ทำให้มีประสิทธิภาพมากขึ้น เพราะหน้าเว็บที่เป็นแบบเก่านั้นจะใช้หลักการของ DOM ธรรมดาซึ่งจะเก็บข้อมูลในรูปแบบของ Tree ซึ่งหากมีข้อมูลจำนวนมาก จะทำให้จำนวนชั้น และ กิ่งมีจำนวนมาก หาต้องการอัพเดตข้อมูลในกิ่งไหนทำได้ช้า แต่ Virtual DOM นั้นจะเก็บเป็น reference ของข้อมูลแทนทำให้สามารถอ้างอิงและ update ข้อมูลได้เร็วกว่า ทำให้ประสิทธิภาพของ Virtual DOM เร็วกว่า DOM มาก
+        </div>
+    </div>
+
+    <div class="container-fulid" style="background-color: white;">
+        <div class="container">
+            <p class="centerhead" style="padding-top: 5%;">ข้อดีของ React</p>
+            <div class="row">
+                <div class="col centerhmatt">
+                    <img src="speed.png" class="icon zoom">
+                    <p class="centerhmatt">Performance</p>
+                </div>
+                <div class="col centerhmatt">
+                    <img src="research.png" class="icon zoom">
+                    <p class="centerhmatt">Easy & Quick Testing</p>
+                </div>
+                <div class="col centerhmatt">
+                    <img src="elearning.png" class="icon zoom">
+                    <p class="centerhmatt">Easy To Learn & Implement</p>
+                </div>
+                <div class="col centerhmatt">
+                    <img src="code.png" class="icon zoom">
+                    <p class="centerhmatt">Faster App Development</p>
+                </div>
+            </div>
+
+            <div class="row" style="padding-bottom: 5%;">
+                <div class="col centerhmatt">
+                    <img src="html.png" class="icon zoom">
+                    <p class="centerhmatt">Code Reusability</p>
+                </div>
+                <div class="col centerhmatt">
+                    <img src="mobile-app.png" class="icon zoom">
+                    <p class="centerhmatt">Native App Development</p>
+                </div>
+                <div class="col centerhmatt">
+                    <img src="document.png" class="icon zoom">
+                    <p class="centerhmatt">Server-Side Rendering</p>
+                </div>
+                <div class="col centerhmatt">
+                    <img src="quick.png" class="icon zoom">
+                    <p class="centerhmatt">Easy & quick live app Updating</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container centerhead" style="padding-top: 5%;">
+        <div class="row">
+            <div class="col-6 centerbody">
+                React ทำให้ประสิทธิภาพในการทำงาน โหลดข้อมูลเร็วขึ้น
+            </div>
+            <div class="col-6 centerhead zoomtext">Performance</div>
+        </div>
+        <div class="row">
+            <div class="col-6 centerhead zoomtext">Easy & Quick Testing</div>
+            <div class="col-6 centerbody">
+                ทำงานได้ง่ายและเร็วขึ้น เนื่องจากการไหลของข้อมูลไม่ได้เป็นไปในทางเดียว
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 centerbody">
+                React มี Conceptที่เข้าใจง่าย สามารถเรียนรู้ด้วยตนเอง และมีเครื่องมือที่ช่วยในการเรียนรู้มาก
+            </div>
+            <div class="col-6 centerhead zoomtext">Easy To Learn & Implement</div>
+        </div>
+        <div class="row">
+            <div class="col-7 centerhead zoomtext">Faster App Development</div>
+            <div class="col-5 centerbody">
+                พัฒนาเว็บแอพพลิเคชั่นได้เร็วขึ้น บั๊กน้อยลง เนื่องจากสามารถใช้โค้ดเดิมซ้ำได้ทำให้เราไม่ต้องทำงานซ้ำซาก
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 centerbody">
+                สามารถใช้ codeเดิมซ้ำได้
+            </div>
+            <div class="col-6 centerhead zoomtext">Code Reusability</div>
+        </div>
+        <div class="row">
+            <div class="col-7 centerhead zoomtext">Native App Development</div>
+            <div class="col-5 centerbody">
+                คุณสามารถทำเว็บแอพพลิเคชั่นโดยนำโค้ด Javascript มาแปลงเป็น App แบบ Native ได้ทั้งบน Android และ iOS
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 centerbody">
+                React จะโหลดข้อมูลทั้งหมดบนเซอร์ฟเวอร์จากนั้นจึงส่งเพจที่แสดงผลแบบเต็มไปยังไคลเอนต์
+            </div>
+            <div class="col-6 centerhead zoomtext">Server-Side Rendering</div>
+        </div>
+        <div class="row" style="padding-bottom: 5%;">
+            <div class="col-6 centerhead zoomtext">Easy & quick live app Updating</div>
+            <div class="col-6 centerbody">
+                การอัปเดตส่วนที่เปลี่ยนแปลงของเว็บแอปพลิเคชันกลายเป็นเรื่องง่ายด้วยความช่วยเหลือของ Virtual React DOM ที่ดูแลโดย React
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fulid" style="background-color: white; padding-bottom: 5%;" id="detail">
+        <div class="container">
+            <p class="centerhead" style="padding-top: 5%;">3 Concept ที่ควรรู้</p>
+            <p class="centerhmatt">Component – ส่วนต่าง ๆ ในเว็บเราจะมองเป็น Component</p>
+            <p class="centerhmatt">State – ข้อมูลที่อยู่ใน Component แต่ละชิ้น เราเรียกว่า State</p>
+            <p class="centerhmatt">Props – ข้อมูลที่ถูกส่งต่อจาก Component ชั้นบนลงไปชั้นล่าง เราเรียกว่า Props (Properties)</p>
+        </div>
+    </div>
+
+    <div class="container" style="overflow-x: hidden;">
+        <h1 style="text-align: center;">Component</h1>
+        <p class="centerbody">Component เหมือนกับการเขียน HTML แต่ใน React ใช้สิ่งที่เรียกว่า JSX ในการแสดงผลเว็บไซต์ หน้าตาจะเหมือน HTML มาก แตกต่างตรงที่เราสามารถเข้าไปเขียนในไฟล์ JavaScript ได้เลย แทนการเขียนไฟล์ HTML โดยเราสามารถเขียน <code class="code">class React-Component</code></p>
+        <img src="compo1.png">
+        <p class="centerbody">เราสามารถกำหนด method สำหรับ component สำหรับตัวอย่างที่เรากำหนดหนึ่งcomponent นั้นจะมีสิ่งที่เรียนว่า <code class="code">render()</code> ซึ่งภายใน <code class="code">render()</code> จะ return สิ่งที่เราต้องการให้ React แสดงบนหน้าเว็บ ในตัวอย่างของเรา คือเราต้องการให้ React แสดงคำว่า Hello world! ในแท็กเพื่อให้ตัวอย่างของเราแสดงผลบนหน้าจอเราต้องใช้ <code class="code">ReactDOM.render()</code> หลังจากนั้นเชื่อม Component ด้วย <code class="code">Hello/</code> และ <code class="code">div id="root"</code></p>
+        <img src="compo2.png">
+        <h1>การจัดการข้อมูล</h1>
+        <p class="centerbody" style="padding-top: 1%;">ข้อมูลมีอยู่สองประเภทใน React คือ props และ state ความแตกต่างระหว่างทั้งสองนั้นค่อนข้างยากที่จะเข้าใจในช่วงการเริ่มต้น ดังนั้นไม่ต้องกังวลหากพบว่าจะทำให้สับสนเล็กน้อย จะง่ายขึ้นเมื่อเรียนรู้และการทำงานของ React
+        ความแตกต่างที่สำคัญคือ “state" นั้นเป็น private และสามารถเปลี่ยนแปลงได้จากภายในคอมโพเนนต์เอง props คือ external และจะไม่ถูกควบคุมโดย Component มันถูกส่งผ่านจากล่างของ Component ที่สูงกว่า และยังควบคุมข้อมูลทั้งหมด</p>
+        <p class="centerbody" style="padding-top: 1%; text-align: center;">Component จะสามารถเปลี่ยน state ภายในได้โดยตรง แต่ส่วนของ props ไม่สามารถเปลี่ยนได้โดยตรง</p>
+        <h1 style="text-align: center;">Props</h1>
+        <center><img src="https://pronto-core-cdn.prontomarketing.com/2/wp-content/uploads/sites/2826/cache/2019/01/Picture2/1532805974.png"></center>
+        <p class="centerbody">คอมโพเนนต์ Hello มีความเป็น static มาก และมันสามารถเรนเดอร์กี่ครั้งก็ได้ด้วยข้อความ Hello World เดิม สิ่งสำคัญของ React คือความสามารถในการนำกลับมาใช้ใหม่ (reusability) หมายความว่าเราสามารถนำคอมโพเนนต์ที่เราเคยเขียนไว้ นำกลับมาใช้ใหม่ได้เรื่อยๆตามที่เราต้องการ ดังตัวอย่างข้างล่าง แต่เราจะเปลี่ยข้อความกันเล็กน้อย
+        เพื่อให้ตรงกับหลักการนำกลับมาใช้ใหม่ เราจึงส่ง props ชื่อ message เข้าไปใน คอมโพเนนต์ Hello</p>
+        <img src="pop1.png">
+        <p class="centerbody">ซึ่ง props จะเรียก message ที่มีค่า <code class="code">my friend</code> ได้ component hello โดยการใช้ <code class="code">this.props.message</code></p>
+        <img src="pop2.png">
+        <h1 style="text-align: center;">State</h1>
+        <center><img src="https://pronto-core-cdn.prontomarketing.com/2/wp-content/uploads/sites/2826/2018/12/Picture11.png"></center>
+        <p class="centerbody">อีกวิธีหนึ่งในการจัดเก็บข้อมูลใน React นั้นอยู่ใน <code class="code">component-state</code> และไม่เหมือนกับ props ซึ่งไม่สามารถเปลี่ยนแปลงได้ โดยตรงแต่ <code class="code">state</code> ทำได้ ดังนั้นหากคุณต้องการให้ข้อมูลในแอปของคุณเปลี่ยนแปลง ตัวอย่างเช่นอิงจากการโต้ตอบของผู้ใช้งาน ข้อมูลนั้นจะต้องถูกจัดเก็บใน <code class="code">component-state</code></code></p>
+        <p></p>
+        <h3 style="color: white;">Initializing state (กำหนดค่าเริ่มต้นให้ state)</h3>
+        <p class="centerbody">ในการกำหนดค่าเริ่มต้นให้ state เราจะใช้เมธอด <code class="code">Constructor()</code> ของคลาส <code class="code">state</code>ของเราเป็น object</p>
+        <img src="stat1.png">
+        <p class="centerbody">ก่อนที่เราจะเซต <code class="code">state()</code> เราจะต้องเรียก <code class="code">super()</code> ใน constructor ก่อน เพราะว่า <code class="code">this</code> จะได้ไม่มีค่าใดๆก่อน <code class="code">super()</code> จะทำงาน</p>
+        <p></p>
+        <h3 style="color: white;">การเปลี่ยน state</h3>
+        <p class="centerbody">หากต้องการแก้ไข state ให้เรียก <code class="code">this.setState()</code> โดยส่งผ่าน <code class="code">new state object</code></p>
+        <img src="stat2.png">
+        <p></p>
+        <h3 style="color: #09d7fc; padding-top: 3%;">สรุป</h3>
+        <p class="centerbody" style="padding-bottom: 10%; padding-top: 3%;"><code class="code">Props</code> คือการส่ง ค่าจาก Component A ไปยัง Component B และใช้ <code class="code">{this.props.ชื่อprops}</code> ส่วน <code class="code">State</code> จะอยู่ใน Component ตัวเองเมื่อ <code class="code">State</code> เปลี่ยนจะส่งผลให้ Componentเปลี่ยน</p>
+    </div>
+
+
+    <div class="container-fulid" style="background-color: white;">
+        <div class="container">
+            <p class="centerhead" style="padding-top: 5%;" id="use">การใช้งาน</p>
+            <p></p>
+            <p class="centerhmatt" style="text-align: left;">Step 1 : Add a DOM Container to the HTML</p>
+            <p></p>
+            <p>ขั้นแรกเปิดหน้า HTML ที่คุณต้องการแก้ไข เพิ่มแท็ก div และตั้ง id เพื่อกำหนดตำแหน่งที่คุณต้องการแสดงด้วย React</p>
+            <img src="div.png">
+            <p class="centerhmatt" style="text-align: left;">Step 2: Add the Script Tags</p>
+            <p></p>
+            <p>เพิ่มแท็ก script ตามภาพด้านล่างสองแท็กแรกใช้สำหรับเชื่อมกับ React ส่วนแท็กที่สามใช้สำหรับเชื่อมกับ Component code</p>
+            Src ที่ใช้สำหรับเชื่อมกับ React: <code class="css-1qhq02d">src="https://unpkg.com/react@16/umd/react.development.js" crossorigin</code>
+            <p></p>
+            Src ที่ใช้สำหรับเชื่อมกับ React: <code class="css-1qhq02d">src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin</code>
+            <p></p>
+            <img src="step2.png">
+            <p class="centerhmatt" style="text-align: left;">Step 3: Create a React Component</p>
+            <p></p>
+            <p>สร้างไฟล์ javascript เพื่อใส่ React Component ตามที่เราต้องการ</p>
+            <img src="javas.png">
+            <p class="centerhead" style="padding-top: 5%; padding-bottom: 3%;"> ผลลัพธ์ </p>
+            <div id="like_button_container" style="text-align: center; padding-bottom: 5%;"></div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-bottom: 5%;">
+        <p class="centerhead" style="padding-top: 5%; padding-bottom: 5%;" id="example">ตัวอย่าง</p>
+        <div class="row">
+            <div class="col-5">
+                <h2>A Simple Component</h2>
+                <p class="centerbody">React components มีmethod <code class="code">render()</code> ในการรับ input และ returns ค่าสำหรับสิ่งที่จะแสดงผล ตัวอย่างนี้ใช้ XML-like syntax หรือ JSX ข้อมูล Input ส่งผ่านไปยัง component สามารถเข้าถึงได้โดย <code class="code">render()</code> ผ่าน <code class="code">this.props</code></p>
+                <p style="text-align: right; color: rgba(26, 25, 25, 0.945);">เลื่อนแทบสีดำไปทางด้านขวาเพื่อดูโค้ด ----> </p>
+            </div>
+            <div class="col-7">
+                <iframe src="https://codesandbox.io/embed/react-hello-world-forked-m7xdv?fontsize=14&hidenavigation=1&theme=dark"
+                style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                title="React Hello World (forked)"
+                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <h2>A Stateful Component</h2>
+                <p class="centerbody">นอกเหนือจากการรับข้อมูล inut ผ่าน <code class="code">this.props</code> component สามารถรักษาข้อมูลสถานะภายในผ่าน <code class="code">this.state</code> เมื่อข้อมูลสถานะของ component เปลี่ยนแปลง markup ที่แสดงผลจะได้รับการอัปเดตโดยเรียกใช้ <code class="code">render()</code> อีกครั้ง</p>
+                <p style="text-align: right; color: rgba(26, 25, 25, 0.945);">เลื่อนแทบสีดำไปทางด้านขวาเพื่อดูโค้ด ----> </p>
+            </div>
+            <div class="col-7">
+                <iframe src="https://codesandbox.io/embed/react-timer-forked-scd5e?fontsize=14&hidenavigation=1&theme=dark"
+                style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                title="React Timer (forked)"
+                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <h2>An Application</h2>
+                <p class="centerbody">ใช้ <code class="code">props</code> และ <code class="code">state</code> ในการทำ Todo application ตามตัวอย่างมีการใช้ <code class="code">state</code> เพื่อ track รายการปัจจุบันตลอดจนข้อความที่ผู้ใช้ป้อน แม้ว่าจะดูเหมือนแสดงผลแบบ inline แต่จริงๆมีการรวบรวมและนำไปใช้โดยใช้ event delegation</p>
+                <p style="text-align: right; color: rgba(26, 25, 25, 0.945);">เลื่อนแทบสีดำไปทางด้านขวาเพื่อดูโค้ด ----> </p>
+            </div>
+            <div class="col-7">
+                <iframe src="https://codesandbox.io/embed/nostalgic-poitras-jofnj?fontsize=14&hidenavigation=1&theme=dark"
+                style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                title="nostalgic-poitras-jofnj"
+                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5">
+                <h2>A Component Using External Plugins</h2>
+                <p class="centerbody">React ช่วยให้คุณสามารถเชื่อมต่อกับไลบรารีและเฟรมเวิร์กอื่นๆ ตัวอย่างนี้ใช้ไลบรารี Markdownในการแปลงค่าของ <code class="code">textarea</code> แบบเรียลไทม์</p>
+                <p style="text-align: right; color: rgba(26, 25, 25, 0.945);">เลื่อนแทบสีดำไปทางด้านขวาเพื่อดูโค้ด ----> </p>
+            </div>
+            <div class="col-7">
+                <iframe src="https://codesandbox.io/embed/using-external-plugins-forked-rlp44?fontsize=14&hidenavigation=1&theme=dark"
+                style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                title="Using external plugins (forked)"
+                allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fulid" style="background-image: url('wall2.png'); background-repeat: no-repeat; background-color: white;">
+        <div class="container">
+                <h1 style="text-align: center;">ขอบคุณข้อมูลจาก</h1>
+                <div style="padding-bottom: 5%; margin: auto; text-align: center;">
+                    <p><a style="color:rgba(29, 28, 28, 0.801);" class="ref" href="https://reactjs.org/">- ReactJS.org -</a></p>
+                    <p><a style="color:rgba(29, 28, 28, 0.801);" class="ref" href="https://www.thaiprogrammer.org/2018/01/learn-react-in-5-mins/">- ThaiProgrammer -</a></p>
+                    <p><a style="color:rgba(29, 28, 28, 0.801);" class="ref" href="https://thaicoding.net/2019/08/22/react-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3/">- THAICODING -</a></p>
+                    <p><a style="color:rgba(29, 28, 28, 0.801);" class="ref" href="https://www.designil.com/react-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3.htmlt">- Designil -</a></p>
+                    <p><a style="color:rgba(29, 28, 28, 0.801);" class="ref" href="https://www.quora.com/What-are-the-main-advantages-of-ReactJS-over-plain-JavaScript">- Quora -</a></p>
+                </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="scripts.js"></script>
+</body>
+
+<footer style="padding: 1%;">
+    <p>&copy; Copyright 2020 by นางสาววรางคณา สุขพาสน์เจริญ</p>
+    <p>62070166</p>
+</footer>
+
+</html>

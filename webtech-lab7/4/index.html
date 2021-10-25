@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<style>
+    div{
+        margin: auto;
+        text-align: center;
+        margin-top: 5%;
+        width: 40%;
+        height: auto;
+        padding: 1%;
+        border-radius: 5px;
+        background-color: burlywood;
+    }
+</style>
+<body>
+    <div>
+        <h1>กรุณากรอกข้อมูล</h1>
+        <form id="showmsg" action="show.php" method="post">
+            
+            <p>
+                <label for="idnum">หมายเลขบัตรประชาชน</label>
+                <input type="text" id="idnum" name="idnum" value="">
+            </p>
+            <p>
+                <label for="name">ชื่อ</label>
+                <input type="text" name="name" id="name" value="">
+            </p>
+            <p>
+                <label for="lastname">นามสกุล</label>
+                <input type="text" name="lastname" id="lastname" value="">
+            </p>
+            <p>
+                <label for="address">ที่อยู่</label>
+                <input type="text" name="address" id="address" value="">
+            </p>
+            <p>
+                <label for="ked">อำเภอ/เขต</label>
+                <input type="text" name="ked" id="ked" value="">
+            </p>
+            <p>
+                <label for="coun">จังหวัด</label>
+                <input type="text" name="coun" id="coun" value="">
+            </p>
+            <p>
+                <label for="code">รหัสไปรษณีย์</label>
+                <input type="text" name="code" id="code" value="">
+            </p>
+            <p>
+                <label for="call">เบอร์โทรศัพท์</label>
+                <input type="text" name="call" id="call" value="">
+            </p>
+
+            <p>
+                <input type="submit" value="Submit" id="submit">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

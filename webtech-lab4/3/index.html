@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ลงทะเบียนร่วมงาน</h1>
+    <div>
+        <input type="text" id="idnum" placeholder="รหัสนักศึกษา">
+        <input type="text" id="name" placeholder="ชื่อ">
+        <input type="text" id="surname" placeholder="นามสกุล"> 
+        <button onclick="regis()">ลงทะเบียน</button>
+    </div>
+        <p></p>
+        <hr width="40%" align="left">
+        <p></p>
+        <table cellpadding="7" id="tablee">
+            <tr style="background-color: rgb(192, 189, 189);">
+                <th>ลำดับที่</th>
+                <th>รหัสนักศึกษา</th>
+                <th>ชื่อ</th>
+                <th>นามสกุล</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>630790123</td>
+                <td>คนดี</td>
+                <td>ใจซื่อสัตย์</td>
+            </tr>
+        </table>
+
+        <script>
+            var num = 2;
+            function regis(){
+                let table = document.getElementById("tablee");
+                let row = table.insertRow(-1);
+                let tnode = document.createTextNode(num);
+                row.insertCell(0).appendChild(tnode);
+                let idnode = document.createTextNode(document.getElementById("idnum").value);
+                row.insertCell(1).appendChild(idnode);
+                let nnode = document.createTextNode(document.getElementById("name").value);
+                row.insertCell(2).appendChild(nnode);
+                let snode = document.createTextNode(document.getElementById("surname").value);
+                row.insertCell(3).appendChild(snode);
+                num += 1;
+            }
+        </script>
+</body>
+</html>

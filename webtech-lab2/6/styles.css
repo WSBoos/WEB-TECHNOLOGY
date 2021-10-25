@@ -1,0 +1,22 @@
+body{
+    font-family: 'Kanit', sans-serif;
+}
+
+div{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 160px;
+    width: 680px;
+    height: 395px;
+    background-color: salmon;
+}
+
+.box{
+    width: 300px;
+    height: 350px;
+    overflow: auto;
+    background-color: white;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}

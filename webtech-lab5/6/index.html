@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+        img{
+            width: 200px;
+            height: 500px;
+        }
+
+        *{
+            margin: auto;
+            text-align: center;
+        }
+
+        .card{
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card-deck" id="card1"></div>
+        <div class="card-deck" id="card2"></div>
+    </div>
+    <script>
+        let requestURL = 'movies.json'; 
+        let request = new XMLHttpRequest(); 
+        request.onreadystatechange = function () { 
+            if (request.readyState == 4 && request.status == 200) {             
+                dataReportStatus(JSON.parse(request.responseText));            
+            } }; 
+        request.open("GET", requestURL, true); 
+        request.send(); 
+        
+        function dataReportStatus(data) { 
+            let num = data.movies.showing.length;
+            for (let i = 0; i < num; i++) {
+                let card1 = document.getElementById("card1");
+                let card2 = document.getElementById("card2");
+                let div = document.createElement("div");
+                div.className = "card";
+                div.id = data.movies.showing[i].id;
+                div.innerHTML += '<img class="card-img-top" src="' + data.movies.showing[i].poster + '" alt="Card image cap"><div class="card-body"><h5>' + data.movies.showing[i].title_en + '</h5><h6 class="card-title">' + data.movies.showing[i].title_th + '</h6><p class="card-text"><small class="text-muted">' + data.movies.showing[i].releasedate + '</small>';
+                for (let j = 0; j < data.movies.showing[i].categoty.length; j++) {
+                    div.innerHTML += data.movies.showing[i].categoty[j] + ' ';
+                }
+                div.innerHTML += '</p></div><button class="btn btn-primary">เช็ครอบภาพยนตร์</button></div>';
+                if(i < num/2)
+                    card1.appendChild(div);
+                else
+                    card2.appendChild(div);
+            } 
+        }
+    </script> 
+</body>
+</html>

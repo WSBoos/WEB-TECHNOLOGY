@@ -1,0 +1,9 @@
+*{
+  font-family: "Pattaya", sans-serif;
+}
+
+.container{
+  margin-top: 1%;
+  background: rgba(0, 0, 0, 0.178);
+  padding: 5px;
+}
